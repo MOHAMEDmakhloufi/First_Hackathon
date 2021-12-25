@@ -1,0 +1,51 @@
+<div class="main">
+    <div class="col-sm-3">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-sm-9">
+      <div class="input-group">
+          <input style="border-radius: 3rem;" type="text" class="form-control" placeholder="Search User..." [(ngModel)]="searchValue"
+          (ngModelChange)="search()" />
+      </div>
+      <hr />
+      <div class="container bootstrap snippets bootdey">
+        <div class="row">
+          <div class="col-lg-10">
+            <div class="main-box no-header clearfix">
+              <div class="main-box-body clearfix">
+                <div class="table-responsive">
+                  <table class="table user-list">
+                    <thead>
+                      <tr>
+                        <th><span>User</span></th>
+                        <th><span>Joined In</span></th>
+                        <th class="text-center"><span>Status</span></th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr  *ngFor="let user of users">
+                        <td class="name">
+                          <img
+                            src="https://bootdey.com/img/Content/avatar/avatar7.png"
+                            alt=""
+                          />
+                          <a [routerLink]="['/users',user.id]" class="user-link">{{user.userName}}</a>
+                          
+                        </td>
+                        <td>{{user.dateCreated | date:'dd/MM/yyyy'}}</td>
+                        <td class="text-center">
+                          <span class="label label-default">active</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

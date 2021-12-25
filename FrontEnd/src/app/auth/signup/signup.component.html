@@ -1,0 +1,79 @@
+<div class="col-sm-8 col-sm-offset-2">
+  <form [formGroup]="userForm" (ngSubmit)="onSignup()">
+    <div class="form-group">
+      <label for="firstName">firstName</label>
+      <input
+        type="text"
+        class="form-control"
+        id="firstName"
+        formControlName="firstName"
+      />
+    </div>
+    <div class="form-group">
+      <label for="lastName">lastName</label>
+      <input
+        type="text"
+        class="form-control"
+        id="lastName"
+        formControlName="lastName"
+      />
+    </div>
+    <div class="form-group">
+      <label for="birthday">birthday</label>
+      <input
+        type="date"
+        class="form-control"
+        id="birthday"
+        formControlName="birthday"
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">EMAIL</label>
+      <input
+        type="text"
+        class="form-control"
+        id="email"
+        formControlName="email"
+      />
+    </div>
+    <div class="form-group">
+      <label for="password">password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        formControlName="password"
+      />
+      
+      <span>Your password must be at: <br><span>at least one lowercase character <br>
+        at least one uppercase character <br>
+        at least one number <br>
+        at least one special character
+      </span></span>
+    </div>
+    <div class="form-group">
+      <label>
+        <input type="radio" value="Male" formControlName="sexe">
+          <span>male &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      </label>
+      <label>
+        <input type="radio" value="Female" formControlName="sexe">
+          <span>female</span>
+      </label>
+    </div>
+    
+
+    <div class="form-group">
+      <label for="phone">phone</label>
+      <input
+        type="number"
+        class="form-control"
+        id="phone"
+        formControlName="phone"
+      />
+    </div>
+    <button class="btn btn-primary" type="submit" [disabled]="userForm.invalid">
+      sign In
+    </button>
+  </form>
+</div>

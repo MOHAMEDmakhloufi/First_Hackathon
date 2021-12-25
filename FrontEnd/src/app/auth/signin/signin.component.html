@@ -1,0 +1,25 @@
+<div class="col-sm-8 col-sm-offset-2">
+  <form [formGroup]="userForm" (ngSubmit)="onLoggedin()">
+    <div class="form-group">
+      <label for="email">EMAIL</label>
+      <input
+        type="text"
+        class="form-control"
+        id="email"
+        formControlName="email"
+      />
+    </div>
+    <div class="form-group">
+      <label for="password">password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        formControlName="password"
+      />
+    </div>
+    <button class="btn btn-primary" type="submit" [disabled]="userForm.invalid">
+      sign In
+    </button>
+  </form>
+</div>

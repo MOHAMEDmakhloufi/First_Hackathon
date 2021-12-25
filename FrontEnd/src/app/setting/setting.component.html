@@ -1,0 +1,86 @@
+<div>
+    <div class="col-sm-3">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-sm-9">
+        <button type="button update" class="btn btn-lg" (click)="onUpdate()">
+            Update account</button>
+        <div>
+            <div *ngIf="testUpdate" class="col-sm-8 col-sm-offset-2">
+                <form [formGroup]="userForm" (ngSubmit)="update()">
+                  <div class="form-group">
+                    <label for="firstName">firstName</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="firstName"
+                      formControlName="firstName"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName">lastName</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lastName"
+                      formControlName="lastName"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="birthday">birthday</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="birthday"
+                      formControlName="birthday"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">EMAIL</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="email"
+                      placeholder="Confirm Email"
+                      formControlName="email"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="password">password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Confirm password"
+                      id="password"
+                      formControlName="password"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="sexe">SEXE</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="sexe"
+                      formControlName="sexe"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">phone</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="phone"
+                      formControlName="phone"
+                    />
+                  </div>
+                  <button class="btn btn-primary" type="submit" [disabled]="userForm.invalid">
+                    Update
+                  </button>
+                </form>
+              </div>
+        </div> 
+        <button type="button" class="btn btn-danger btn-lg" (click)="onDelete()">
+            Delete account</button>   
+    </div>
+    
+</div>    

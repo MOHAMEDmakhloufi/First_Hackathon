@@ -1,0 +1,46 @@
+
+
+.card-image {
+    margin-top: 4rem;
+    width: 10px;
+    height: 20px;
+}
+
+.card {
+    margin-bottom: 2rem;
+}
+
+li {
+    
+    
+    border-width: medium;
+    padding: 2rem;
+    
+    text-align: center;
+    border-radius: 2px;
+    font-weight: bold;
+
+}
+
+a{
+    color: black;
+    text-decoration: none !important;
+}
+
+li:hover {
+    background-color: grey; 
+}
+
+button:hover {
+    background-color: grey; 
+}
+
+
+ul{
+    list-style: none;
+    padding: 0%;
+    }
+
+button {
+    background-color: #e5ebf3;
+}
